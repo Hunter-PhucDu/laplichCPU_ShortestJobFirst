@@ -1,38 +1,151 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
 .App {
+  text-align: center;
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 8px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f0e7dc; */
+  margin: 0;
+  padding: 0;
+}
+
+/* CPU Container */
+.cpu-scheduling-simulation {
+  /* background-color: #f0e7dc; */
+  background: #fffefd;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+  max-width: 100%;
+}
+.tieuDe {
+  font-size: 26px;
+  font-weight: bold;
+  
+}
+.dinhNghia, .moPhong {
+  background-color: #f0e7dc;
+}
+.phongChu {
+  font-size: 20px;
+  font-weight: bold;  
+}
+
+.thanhNgang {
+  font-size: 14px;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ac1034;
+  color: #fff;
+  max-width: 100%;
+  font-weight: bold;
+}
+.cpu-scheduling-simulation input,
+.cpu-scheduling-simulation button {
+  margin: 0 5px;
+}
+
+/* Start Button */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ac1034;
+  color: #fff;
+  border: none;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  /* margin: 0 5px; */
+  text-align: center;
+  width: 90px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  display: inline-block;
+  font-size: 8px;
+
+}
+
+/* Table Scroll Container */
+.table-scroll {
+  overflow-x: scroll;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* Process Table */
+.process-table {
+  background-color: #fff;
+  border-collapse: collapse;
+  display: inline-block;
+  width: auto;
+  color: green;
+}
+
+.process-table th,
+.process-table td {
+  border: 1px solid #ccc;
+  padding: 4px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.process-table th {
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.process-table thead th {
+  min-width: 22.15px;
+  /* Đặt chiều rộng tối thiểu cho các ô trong <thead> */
+  width: auto;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.process-table .running {
+  background-color: rgb(255, 255, 85);
+  color: #fff;
+}
+
+.process-table .completed {
+  background-color: rgb(0, 119, 0);
+  color: #fff;
+  height: 15px;
+}
+
+.process-list {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+  /* Khoảng cách bên trong khung */
+  max-height: 300px;
+  /* Kích thước tối đa của khu vực */
+  overflow-y: auto;
+  /* Hiển thị thanh cuộn khi nội dung vượt quá kích thước tối đa */
+  background-color: #f0e7dc;
+  border: 1px solid #ac1034;
 }
 
-.App-link {
-  color: #61dafb;
+.process-list table {
+  border: 1px solid #ccc;
+  /* Thêm đường viền cho khu vực bảng */
+  width: 25%;
+  /* Đảm bảo rằng bảng chiếm toàn bộ khu vực */
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls {
+  margin: 10px;
+}
+
+.controls button {
+  margin: 0 5px;
 }
